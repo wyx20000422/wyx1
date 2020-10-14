@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="style/reg.css"> 
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/register.js"></script>
+    <script type="text/javascript"></script>
+
+    <script>  
+        function  detectCapsLock(e){ 
+           valueCapsLock  =  e.keyCode ? e.keyCode:a.which; // Caps Lock　是否打开  
+           valueShift  =  e.shiftKey ? e.shiftKey:((valueCapsLock  ==   16 ) ? true : false ); // shift键是否按住 
+         
+           if (((valueCapsLock >=   65   &&  valueCapsLock  <=   90 )  &&   ! valueShift) // Caps Lock 打开，并且 shift键没有按住  
+           || ((valueCapsLock >=   97   &&  valueCapsLock  <=   122 )  &&  valueShift)) // Caps Lock 打开，并且按住 shift键  
+              document.getElementById('capStatus').style.visibility  =  'visible'; 
+           else  
+              document.getElementById('capStatus').style.visibility  =  'hidden'; 
+        
+        /*  
+        javascript中keyCode代码对应表 
+        event.keyCode=32        空格 
+        event.keyCode=13        回车 
+        event.keyCode=27        Esc 
+        event.keyCode=16)        Shift 
+        event.keyCode=17)        Ctrl 
+        event.keyCode=18)        Alt 
+         */  
+        
+       } 
+       </script>  
+</head>
+<body>
+    <div class="form-wa">
+        <div class="header">
+            注册
+        </div>
+        <div class="input-wa">
+           <div class="border-wa">
+            <input type="text" name="username" placeholder="用户名（4-8个字符）" class="border-it" id="username"><span id="msg"></span>
+        </div>
+
+        <div class="border-wa">
+            <input type="password" name="userpwd" placeholder="密码(16个字符以内)" class="border-it" id="userpwd" onkeypress ="detectCapsLock(event)">
+            <img src="image/closeeye.jpg" width="25" height="25" >
+            
+        </div>
+
+        <div  id ="capStatus"  style ="visibility:hidden"><font  color =red>现在正在输入大写字母，请注意大小写 <font></div>
+
+        <div class="border-wa">
+            <input type="password" name="password" placeholder="确认密码" class="border-it" id="passwd">
+        </div>
+        <div class="border-wa">
+            <input type="text" name="useremail" placeholder="邮箱" class="border-it" id="useremail"><span id="mse"></span>
+        </div>
+       <div class="zhuce">
+            <input type="button" value="注册" id="reg">
+        </div>
+
+       <!-- <div class="denglu">
+            <input type="button" value="登录" id="lo">
+        </div>-->
+    </div>
+     
+    </div>
+    
+</body>
+</html>

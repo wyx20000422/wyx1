@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-family: 'JetBrains Mono Medium';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top ,#bac8e0,#6a85b6);
+}
+.form-wa{
+    width: 300px;
+    background-image: linear-gradient(to top ,#e4efe9,#93a5cf);
+    color: #fff;
+    border-radius: 2px;
+    padding: 50px;
+}
+.header{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+#username,#userpwd,#passwd,#useremail{
+    background-image:linear-gradient(to top ,#e4efe9,#93a5cf);
+    border: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+}
+.form-wa.header.input-wa input::placeholder{
+    text-transform: uppercase;
+}
+.border-wa{
+    background-image: linear-gradient(to right,#e8098b,#0eb4dd);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#username,#userpwd,#passwd,#useremail{
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    border-radius: 30px;
+}
+.zhuce{
+    display: flex;
+    justify-content: center;
+}
+#reg{
+    width: 60%;
+    text-transform: uppercase;
+    border: 2px solid #0e92b3;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+#reg:hover{
+    background-color: #0e92b3;
+}
+/*.denglu{
+     display: flex;
+    margin-left: 250px;
+}
+/*#lo{
+    width: 90%;
+    text-transform: uppercase;
+    border: 1px solid #0e92b3;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+/*#lo:hover{
+    background-color: #0e92b3;
+}

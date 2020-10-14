@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style/main.css">
+
+<script src="script/jquery-3.3.1.min.js"></script>
+<script src="script/manage.js"></script>
+</head>
+<body>
+    欢迎您 <span id="curname" ></span> ,请随便看看
+      <input type="hidden" id="curid">
+
+      <input type="hidden" name="pageNum" value="1" id="pageNum">
+      <input type="hidden" name="pageSize" value="3">
+
+      <div id="condition">
+        用户id:<input type="text" name="userid">
+        用户名:<input type="text" name="username">
+        密码:<input type="text" name="userpwd">
+        <input type="button" value="隐藏查询按钮" id="searchBtn">
+        <input type="button" value="查询" id="searchBtnShow">
+        <!--<input type="button" value="隐藏加一按钮" id="aaaBtn">-->
+      </div>
+      <div id="resultdiv">
+        <table id="resulttable">
+          <tr>
+            <th>用户编号</th>
+            <th>用户名</th>
+            <th>用户密码</th> 
+            <th>操作</th> 
+          </tr>
+        </table>
+      </div>
+      <div id="pagectrl">
+        共<span id="total"></span>条 &nbsp;&nbsp;
+        共<span id="pages"></span>页 &nbsp;&nbsp;
+        第<span id="curpage"></span>页
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="javescript:void(0)" id="prePage">上一页</a><span id="prePageSpan">上一页</span>
+       <input type="range" value="1"  min="1" id="goRange"> <input type="gopage" readonly id="gopage" min="1"><a href="javescript:void(0)" id="goBtn">Go</a>
+        <a href="javescript:void(0)" id="nextPage">下一页</a><span id="nextPageSpan">下一页</span>
+      </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重设密码</title>
+    <link rel="stylesheet" href="style/modpwd.css">
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/modpwd.js"></script>
+   <script src="script/wangjimima.js"></script>
+</head>
+<body>
+ <!--欢迎您 <span id="curpwd" ></span> ,请随便看看-->
+    <input type="hidden" name="pageNum" value="1" id="pageNum">
+      <input type="hidden" name="pageSize" value="3">
+      <div class="eqdiv">
+        <input type="hidden" id="curemail">
+        <input type="hidden" id="curid">
+        <input type="hidden" id="curpwd">
+        旧密码:<input type="password" name="oldpwd" id="oldpwd"><br>
+ 新密码:<input type="password" name="userpwd" id="userpwd"><br>
+ 确认新密码:<input type="password" name="quserpwd" id="quserpwd"><br>
+  <br>
+
+  <input type="button" value="隐藏查询" id="eqsearch">
+  <input type="button" value="确定" id="queding">
+  <input type="button" value="返回" id="return"> 
+  
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/managerlogin.js"></script>
+    <script type="text/javascript"></script>
+    <script>  
+        function  detectCapsLock(e){ 
+           valueCapsLock  =  e.keyCode ? e.keyCode:e.which; // Caps Lock　是否打开  
+           valueShift  =  e.shiftKey ? e.shiftKey:((valueCapsLock  ==   16 ) ? true : false ); // shift键是否按住 
+         
+           if (((valueCapsLock >=   65   &&  valueCapsLock  <=   90 )  &&   ! valueShift) // Caps Lock 打开，并且 shift键没有按住  
+           || ((valueCapsLock >=   97   &&  valueCapsLock  <=   122 )  &&  valueShift)) // Caps Lock 打开，并且按住 shift键  
+              document.getElementById('capStatus').style.visibility  =  'visible'; 
+           else  
+              document.getElementById('capStatus').style.visibility  =  'hidden'; 
+        
+        /*  
+        javascript中keyCode代码对应表 
+        event.keyCode=32        空格 
+        event.keyCode=13        回车 
+        event.keyCode=27        Esc 
+        event.keyCode=16)        Shift 
+        event.keyCode=17)        Ctrl 
+        event.keyCode=18)        Alt 
+         */  
+        
+       } 
+       </script>  
+</head>
+<body>
+
+    <div class="form-wa">
+        <div class="header">
+            管理员登录  
+        </div>
+        <div class="input-wa">
+           <div class="border-wa">
+            <input type="text" name="username" placeholder="用户名" class="border-it" id="username">
+        </div>
+        <div class="border-wa">
+            <input type="password" name="userpwd" placeholder="密码" class="border-it" id="userpwd" onkeypress ="detectCapsLock(event)">
+            <img src="image/closeeye.jpg" width="30" height="30">
+        </div>
+        <div  id ="capStatus"  style ="visibility:hidden"><font  color =red>现在正在输入大写字母，请注意大小写 <font></div> 
+        <div class="action">
+        <input type="button" value="登录" id="log">
+        </div>
+       
+    </div>
+     
+    
+    
+    
+</body>
+</html>
