@@ -488,3 +488,63 @@ body{
      width: calc(100% * 4px);
      height: calc(100% * 4px);
  }
+
+ 
+ #que{
+    background: none;
+     border: 0;
+     outline: 0;
+     color: rgba(13, 2, 73, 0.767);
+     font-family:'JetBrains None';
+     font-size: 15px;
+     cursor: pointer;
+     border: 2px solid rgb(13, 2, 73,0.767);
+     
+     
+ }
+ #que label{
+     position: absolute;
+     left: 0;
+     top: 0;
+     line-height: 30px;
+     width: 100%;
+     height: 100%;
+     z-index:1;
+     background-color: rgb(51,51,51);
+ }
+ #que::before{
+     content: '';
+     position: absolute;
+     left: -2px;
+     top: -2px;
+     width: 0px;
+     height: 0px;
+     z-index: 0;
+     background-color: brown;
+     transition: width.5s,heigth.5s;
+     
+ }
+ #que::after{
+    content: '';
+     position: absolute;
+     right: -2px;
+     bottom: -2px;
+      width: 0px;
+     height: 0px;
+     z-index: 0;
+     background-color: brown; 
+      transition: width.5s,heigth.5s;
+     /*width: calc(100% * 4px);
+     height: calc(100% * 4px);*/
+ }
+ #que:hover{
+     color: brown;
+ }
+ #que:hover::before{
+     width: calc(100% * 4px);
+     height: calc(100% * 4px);
+ }
+ #que:hover::after{
+     width: calc(100% * 4px);
+     height: calc(100% * 4px);
+ }

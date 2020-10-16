@@ -4,20 +4,20 @@ $(document).ready(function(){
 
 		
 		
-		var username = $("#username").val();
-		if(!username){//用户没写用户名为真
+		var manname = $("#manname").val();
+		if(!manname){//用户没写用户名为真
 			alert("用户名还没有写哦");
 				return;
 		}
 		
-		var userpwd = $("#userpwd").val();
-		if(!userpwd){
+		var manpwd = $("#manpwd").val();
+		if(!manpwd){
 			alert("密码还没有写呢")
 			return;
 		}
 
-		$.post("/mavendemo/login",$("[name]").serialize(),function(data){
-			if(data.userid){
+		$.post("/mavendemo/manlogin",$("[name]").serialize(),function(data){
+			if(data.manid){
 				window.location.href = "/mavendemo/manage.html";
 				
 			}
@@ -32,17 +32,23 @@ $(document).ready(function(){
 		
 	});
 	
-	$("#userpwd").next().click(function(){
-	var type=$("#userpwd").attr("type");
+	$("#manpwd").next().click(function(){
+	var type=$("#manpwd").attr("type");
 		if(type=="password"){
-			$("#userpwd").next().attr("src","image/closeeye.jpg");
-			$("#userpwd").next().css({"width":"30","height":"30"});
-			$("#userpwd").prop("type","text");
+			$("#manpwd").next().attr("src","image/closeeye.jpg");
+			$("#manpwd").next().css({"width":"30","height":"30"});
+			$("#manpwd").prop("type","text");
 		}
 		else{
-			$("#userpwd").next().attr("src","image/eye.jpg");
-			$("#userpwd").next().css({"width":"30","height":"30"});
-			$("#userpwd").prop("type","password");
+			$("#manpwd").next().attr("src","image/eye.jpg");
+			$("#manpwd").next().css({"width":"30","height":"30"});
+			$("#manpwd").prop("type","password");
 		}
 	});
 });
+$(function(){
+	$("#return").click(function(){
+		 window.location.href="/mavendemo/index.html";	
+		
+	});
+})

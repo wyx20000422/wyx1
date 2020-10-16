@@ -1,11 +1,11 @@
 $(function(){
 
-	$.post("/mavendemo/getcuruser",null,function(data){
+	$.post("/mavendemo/getcurmanager",null,function(data){
 		if(data){
 			//名字写在页面上
-			$("#curname").html(data.username);
+			$("#curname").html(data.manname);
 			//将当前用户id藏在页面上
-			$("#curid").val(data.userid);
+			$("#curid").val(data.manid);
 		}
 		
 	},"json");
@@ -44,9 +44,9 @@ $(function(){
 					$("<td></td>").html(userinfo.userpwd).appendTo(oTr);
 					
 					var oTd = $("<td></td>").appendTo(oTr);
-					var curid = $("#curid").val();
+				//	var curid = $("#curid").val();
 
-					if(curid != userinfo.userid){
+					if(userinfo.userid){
 						$("<input type='button' value='删除'>").click(function(){
 							var isOK = confirm("您是真的要删除吗?");
 							if(isOK){
@@ -106,7 +106,7 @@ $(function(){
 							//获取当前用户的id
 							var userid = $(this).parent().parent().find("td:eq(0)").html();
 							var oBtn = $(this);
-							$.post("/mavendemo/moduser", "userid=" + userid + "&username=" + username + "&userpwd=" + 1, function(data){
+							$.post("/mavendemo/moduser", "userid=" + userid + "&username=" + username + "&userpwd=" + userpwd, function(data){
 								if(data == "true"){
 									//将用户名还原成不可编辑状态
 									var oTd2 = oBtn.parent().parent().find("td:eq(1)");
@@ -125,7 +125,7 @@ $(function(){
 									//提示信息
 									//将确定按钮还原成修改按钮
 									//$("#aaaBtn").click();
-									$.post("/mavendemo/moduser", "userid=" + userid + "&username=" + username + "&userpwd=" + 0,"text")
+									$.post("/mavendemo/moduser", "userid=" + userid + "&username=" + username + "&userpwd=" + userpwd,"text")
 								}
 								else{
 									alert("用户名冲突,请重试.");
@@ -210,3 +210,9 @@ $(function(){
 
 	});
 });
+$(function(){
+	$("#return").click(function(){
+		 window.location.href="/mavendemo/manager.html";	
+		
+	});
+})

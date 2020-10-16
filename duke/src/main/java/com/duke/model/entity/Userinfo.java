@@ -2,6 +2,8 @@ package com.duke.model.entity;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Userinfo {
     /**
      *
@@ -46,6 +48,7 @@ public class Userinfo {
      *
      * @mbg.generated Sun Oct 11 17:18:24 CST 2020
      */
+    
     private Date createTime;
 
     /**
@@ -64,6 +67,7 @@ public class Userinfo {
      *
      * @mbg.generated Sun Oct 11 17:18:24 CST 2020
      */
+    
     private Date operatorTime;
 
     /**
@@ -170,6 +174,7 @@ public class Userinfo {
      *
      * @mbg.generated Sun Oct 11 17:18:24 CST 2020
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     public Date getCreateTime() {
         return createTime;
     }
@@ -182,6 +187,7 @@ public class Userinfo {
      *
      * @mbg.generated Sun Oct 11 17:18:24 CST 2020
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
@@ -218,6 +224,7 @@ public class Userinfo {
      *
      * @mbg.generated Sun Oct 11 17:18:24 CST 2020
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     public Date getOperatorTime() {
         return operatorTime;
     }
@@ -230,10 +237,11 @@ public class Userinfo {
      *
      * @mbg.generated Sun Oct 11 17:18:24 CST 2020
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     public void setOperatorTime(Date operatorTime) {
         this.operatorTime = operatorTime;
     }
-
+    
 	@Override
 	public String toString() {
 		return "Userinfo [userid=" + userid + ", username=" + username

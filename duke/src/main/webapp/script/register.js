@@ -101,7 +101,7 @@ $(function(){
 			}
 			else{
 				alert("邮箱格式错误");
-				window.location.href = "/mavendemo/reg.html";
+			//	window.location.href = "/mavendemo/reg.html";
 			}
 			
 		},"text");
@@ -126,3 +126,11 @@ $(function(){
 			}
 		});
 	});
+
+	$(function(){
+		$("#return").click(function(){
+			 window.location.href="/mavendemo/index.html";	
+			
+		});
+	})
+	

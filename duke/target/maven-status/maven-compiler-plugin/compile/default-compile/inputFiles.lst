@@ -1,6 +1,8 @@
 C:\eclipse workplace\duke\src\main\java\com\duke\controllers\UserManagerController.java
+C:\eclipse workplace\duke\src\main\java\com\duke\controllers\ManagerController.java
 C:\eclipse workplace\duke\src\main\java\com\duke\model\entity\ManagerExample.java
 C:\eclipse workplace\duke\src\main\java\com\duke\model\entity\Manager.java
+C:\eclipse workplace\duke\src\main\java\com\duke\model\services\ManagerService.java
 C:\eclipse workplace\duke\src\main\java\com\duke\model\services\UserManagerService.java
 C:\eclipse workplace\duke\src\main\java\com\duke\model\entity\Userinfo.java
 C:\eclipse workplace\duke\src\main\java\com\duke\model\dao\UserinfoMapper.java

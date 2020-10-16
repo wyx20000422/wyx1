@@ -6,8 +6,16 @@ $(function(){
             $("#curemail").html(data.useremail);
 			//将当前用户id藏在页面上
             //$("#curemail").val(data.useremail);
-           $("#curid").val(data.userid);
-            $("#curname").html(data.username);
+		   $("#curid").val(data.userid);
+		   
+			$("#curname").html(data.username);
+			if(data.operatorTime==null)
+			{
+				$("#curlogin").html("您是第一次登录");
+			}
+			else{
+				$("#curlogin").html(new Date(data.operatorTime).format("yyyy-MM-dd hh:mm:ss"));
+			}
             
             
 		}

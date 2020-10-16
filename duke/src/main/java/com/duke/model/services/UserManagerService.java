@@ -169,7 +169,7 @@ public boolean  addNewUser(Userinfo user){
 	//  }
 	public boolean emaillogin(String useremail) {
 		String regex="^\\s*\\w+(?:\\.{0,1}[\\w-]+)"
-				+ "*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$";
+				+ "*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[com]+\\s*$";
 		return Pattern.compile(regex).matcher(useremail).find();
 		
 	}

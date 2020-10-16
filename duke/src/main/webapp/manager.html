@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>管理员登录</title>
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/manlogin.css">
     <script src="script/jquery-3.3.1.min.js"></script>
     <script src="script/managerlogin.js"></script>
     <script type="text/javascript"></script>
@@ -39,15 +39,16 @@
         </div>
         <div class="input-wa">
            <div class="border-wa">
-            <input type="text" name="username" placeholder="用户名" class="border-it" id="username">
+            <input type="text" name="manname" placeholder="用户名" class="border-it" id="manname">
         </div>
         <div class="border-wa">
-            <input type="password" name="userpwd" placeholder="密码" class="border-it" id="userpwd" onkeypress ="detectCapsLock(event)">
+            <input type="password" name="manpwd" placeholder="密码" class="border-it" id="manpwd" onkeypress ="detectCapsLock(event)">
             <img src="image/closeeye.jpg" width="30" height="30">
         </div>
         <div  id ="capStatus"  style ="visibility:hidden"><font  color =red>现在正在输入大写字母，请注意大小写 <font></div> 
         <div class="action">
         <input type="button" value="登录" id="log">
+        &nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="返回" id="return">
         </div>
        
     </div>
