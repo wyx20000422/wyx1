@@ -4,11 +4,12 @@ $(function(){
 		//给用户名文本操作绑定失去焦点事件
 	$("#username").blur(function(){
 		var username = $(this).val();
+		//var username = username.replace(/\n(\n)*()*(\n)*\n/g,"");
 		//验证是否为空
 		if(!username){
-			
 			return ;
 		}
+		
 		$.post("/mavendemo/checkname",$(this).serialize(),function(datae){
 			if(datae == "true"){
 				$("#msg").show().css("color","green").html("此名字未注册");
@@ -48,6 +49,12 @@ $(function(){
 			alert("请输入用户名");
 			//光标进入用户名文本框
 			$("#username").focus();
+			return;
+		}
+		if(username.indexOf(" ")==1||username.trim().length == 0){
+			alert("用户名不能含有空格,请修改");
+			$("#username").focus();
+			$("#username").select();
 			return;
 		}
 		if(username.length<4||username.length>8){
